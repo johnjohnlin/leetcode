@@ -1,2 +1,6 @@
-palindrome-number.cpp: some how slow
-longest-palindromic-substring.cpp: complexity
+Slow? Check:
+palindrome-number.cpp
+valid-palindrome.cpp
+
+Complexity:
+longest-palindromic-substring.cpp

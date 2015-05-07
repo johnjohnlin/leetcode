@@ -6,21 +6,19 @@ struct ListNode {
 
 class Solution {
 public:
-	ListNode* deleteDuplicates(ListNode* head) {
-		if (head == nullptr) {
-			return nullptr;
-		}
-		ListNode *prev = head;
-		ListNode *cur = head->next;
+	ListNode* removeElements(ListNode* head, int val) {
+		ListNode pseudo_head(0); pseudo_head.next = head;
+		ListNode *prev = &pseudo_head;
+		ListNode *cur = head;
 		while (cur != nullptr) {
-			if (prev->val == cur->val) {
+			if (cur->val == val) {
 				prev->next = cur->next;
 			} else {
 				prev = prev->next;
 			}
 			cur = cur->next;
 		}
-		return head;
+		return pseudo_head.next;
 	}
 };
 int main(int argc, char const* argv[])

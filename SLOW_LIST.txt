@@ -4,3 +4,6 @@ valid-palindrome.cpp
 
 Complexity:
 longest-palindromic-substring.cpp
+
+Code Logic Too Complex:
+minimum-size-subarray-sum.cpp (~15 lines solution exists)

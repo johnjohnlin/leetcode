@@ -15,7 +15,7 @@ struct TreeNode {
 class Solution {
 	enum HasDoneDirection {NEW_NODE = 0, DONE_LEFT, DONE_RIGHT};
 public:
-	vector<int> preorderTraversal(TreeNode* root) {
+	vector<int> postorderTraversal(TreeNode* root) {
 		// A non-recursive method
 		vector<int> ret;
 		if (root == nullptr) {
@@ -30,7 +30,7 @@ public:
 			// Traversal
 			switch (state) {
 				case NEW_NODE:
-					ret.push_back(cur->val);
+					// add current node to answer
 					if (cur->left != nullptr) {
 						traverse_stack.push({cur->left, NEW_NODE});
 						state = DONE_LEFT;
@@ -43,6 +43,7 @@ public:
 						break;
 					}
 				case DONE_RIGHT:
+					ret.push_back(cur->val);
 					traverse_stack.pop();
 			}
 		}
@@ -59,7 +60,7 @@ int main(int argc, char const* argv[])
 	tns[3].val = 4; tns[3].left = nullptr; tns[3].right = nullptr;
 	tns[4].val = 5; tns[4].left = nullptr; tns[4].right = nullptr;
 	Solution s;
-	auto &&ans = s.preorderTraversal(tns);
+	auto &&ans = s.postorderTraversal(tns);
 	for (auto v: ans) {
 		printf("%d ", v);
 	}

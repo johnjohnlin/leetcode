@@ -14,6 +14,20 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
 };
 
+inline void PrintVector(const vector<int> &v) {
+	for (int num: v) {
+		printf("%d ", num);
+	}
+	putchar('\n');
+}
+
+inline void PrintMatrix(const vector<vector<int>> &m) {
+	for (auto &v: m) {
+		PrintVector(v);
+	}
+	puts("====");
+}
+
 int main(int argc, char const* argv[])
 {
 	Solution s;

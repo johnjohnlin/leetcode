@@ -1,4 +1,6 @@
 #include <string>
+#include <algorithm>
+#include <utility>
 #include <vector>
 #include <cassert>
 #include <cstdio>

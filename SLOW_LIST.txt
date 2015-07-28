@@ -5,6 +5,7 @@ valid-palindrome.cpp
 Complexity:
 longest-palindromic-substring.cpp
 insert-interval.cpp
+search-a-2d-matrix-ii.cpp
 
 Code Logic Too Complex:
 minimum-size-subarray-sum.cpp (~15 lines solution exists)

@@ -18,7 +18,7 @@ struct ListNode {
 
 pair<ListNode*, vector<ListNode>> CreateList(const vector<int> &v) {
 	const int n = v.size();
-	pair<ListNode*,vector<ListNode>> ret{nullptr, vector<ListNode>(n, {0})};
+	pair<ListNode*,vector<ListNode>> ret{nullptr, vector<ListNode>(n, ListNode(0))};
 	if (n == 0) {
 		return ret;
 	}
